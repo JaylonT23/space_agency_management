@@ -1,0 +1,24 @@
+<h1>Astronaut Roster</h1>
+<div>
+  <input type="text" id="search-astronauts" placeholder="Search Astronauts" onkeyup="searchAstronauts()">
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Affiliation</th>
+      <th>Space Time</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody id="astronauts-tbody">
+    <% @astronauts.each do |astronaut| %>
+      <tr>
+        <td><%= astronaut.name %></td>
+        <td><%= astronaut.affiliation %></td>
+        <td><%= astronaut.space_time %></td>
+        <td><%= astronaut.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
